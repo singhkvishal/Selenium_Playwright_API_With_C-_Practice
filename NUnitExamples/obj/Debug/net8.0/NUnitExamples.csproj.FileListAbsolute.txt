@@ -1,0 +1,5 @@
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\NUnitExamples\obj\Debug\net8.0\NUnitExamples.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\NUnitExamples\obj\Debug\net8.0\NUnitExamples.AssemblyInfoInputs.cache
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\NUnitExamples\obj\Debug\net8.0\NUnitExamples.AssemblyInfo.cs
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\NUnitExamples\obj\Debug\net8.0\NUnitExamples.csproj.CoreCompileInputs.cache
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\NUnitExamples\obj\Debug\net8.0\NUnitExamples.sourcelink.json
