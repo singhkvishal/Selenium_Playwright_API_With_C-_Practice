@@ -2,8 +2,9 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
+using System.Drawing.Imaging;
+using System.IO;
+
 namespace SeleniumTest
 {
     public class TakeScreenshot
@@ -13,7 +14,36 @@ namespace SeleniumTest
     [SetUp]
     public void BeforeSuite() {
         driver = new ChromeDriver();
+        driver.Navigate().GoToUrl("https://stackoverflow.com/");
     }
+
+    [Test]
+    public void TakeScreenShotWithPNGFormat(){
+        string path = Directory.GetCurrentDirectory().Split("SeleniumTest")[0];
+        Thread.Sleep(TimeSpan.FromSeconds(5));
+        Screenshot TakeScreenShot= ((ITakesScreenshot)driver).GetScreenshot();
+        TakeScreenShot.SaveAsFile(path +"ScreenShotPng."+ ImageFormat.Png);
+    }
+    
+    [Test]
+    public void TakeScreenShotWithJpegFormat(){
+        string path = Directory.GetCurrentDirectory().Split("SeleniumTest")[0];
+        Thread.Sleep(TimeSpan.FromSeconds(5));
+        Screenshot TakeScreenShot= ((ITakesScreenshot)driver).GetScreenshot();
+        TakeScreenShot.SaveAsFile(path +"ScreenShotJpeg."+ ImageFormat.Jpeg);
+    }
+
+    [Test]
+    public void TakeElementScreenShot(){
+        string path = Directory.GetCurrentDirectory().Split("SeleniumTest")[0];
+        Thread.Sleep(TimeSpan.FromSeconds(5));
+        IWebElement screen=driver.FindElement(By.XPath("//div[@class='overflow-hidden mln8 mrn8']"));
+        Screenshot TakeScreenShot= ((ITakesScreenshot)screen).GetScreenshot();
+        TakeScreenShot.SaveAsFile(path +"ElementScreen."+ ImageFormat.Jpeg);
+    }
+
+
+
 /*
     @[BeforeTest]
     public void LaunchURL() {
@@ -35,31 +65,7 @@ namespace SeleniumTest
         System.out.println("TestGroup");
     }
 */
-/*
-    [Test]
-    public void TakePageScreenShot() {
-        Screenshot screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
-        screenshot.SaveAsFile(System.AppDomain.CurrentDomain.BaseDirectory, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-    }
-
-    [Test]
-    public void TakeWebElementScreenShot()  {
-        File we = driver.FindElement(By.XPath("/html/body/div[1]/div[2]")).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(we, new File(System.getProperty("user.dir") + "\\test.png"));
-
-           
-    }
-
-    [Test,Order(0)]
-    public void ActionTest1()  {
-        driver.Url="https://www.selenium.dev/selenium/web/web-form.html";
-        IWebElement webElement = driver.FindElement(By.Name("my-password"));
-        File scrFile = webElement.getScreenshotAs(OutputType.FILE);
-        File DestFile = new File(System.getProperty("user.dir") + "/test.png");
-        FileUtils.copyFile(scrFile, DestFile);
-    }
-*/
     [TearDown]
     public void End() {
         driver.Close();

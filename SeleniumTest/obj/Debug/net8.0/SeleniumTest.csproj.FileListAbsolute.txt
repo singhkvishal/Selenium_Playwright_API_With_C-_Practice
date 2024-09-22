@@ -103,3 +103,6 @@ D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\obj\De
 D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\obj\Debug\net8.0\SeleniumTest.genruntimeconfig.cache
 D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\obj\Debug\net8.0\ref\SeleniumTest.dll
 D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\obj\Debug\net8.0\SeleniumTest.sourcelink.json
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Study\GitProject\Selenium_Playwright_API_With_C#_Practice\SeleniumTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
